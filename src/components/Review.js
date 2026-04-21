@@ -41,7 +41,7 @@ const Review = () => {
           setIndex(randomIndex);
         }}
       className="random-btn">
-        Random
+        surprise me
       </button>
     </div>
   );
