@@ -7,7 +7,7 @@ const Review = () => {
   const { id, name, job, image, text } = data[index];
 
   return (
-    <div className="Review">
+    <div className="review">
       <img src={image} alt={name} className="person-img" />
 
       <h4 id={`author-${id}`} className="author">
@@ -22,14 +22,14 @@ const Review = () => {
         onClick={() => {
           setIndex((prev) =>  prev > 0 ? prev - 1 : data.length - 1 );
         }}
-      >
+      className="prev-btn">
         Previous
       </button>
       <button
         onClick={() => {
           setIndex((prev) =>  prev < data.length-1 ? prev +1 : 0 );
         }}
-      >
+      className="next-btn">
         Next
       </button>
       <button
@@ -38,7 +38,7 @@ const Review = () => {
 
           setIndex(randomIndex);
         }}
-      >
+      className="random-btn">
         Random
       </button>
     </div>
