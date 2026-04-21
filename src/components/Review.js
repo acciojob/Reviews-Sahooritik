@@ -35,7 +35,9 @@ const Review = () => {
       <button
         onClick={() => {
           let randomIndex = Math.floor(Math.random() * data.length);
-
+        if(randomIndex==index){
+            randomIndex = (index+1)%data.length
+        }
           setIndex(randomIndex);
         }}
       className="random-btn">
